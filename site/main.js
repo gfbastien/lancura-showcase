@@ -1,9 +1,14 @@
 // L'Ancura — site vitrine
 
 // Lien de partage du formulaire Tally de la liste d'attente (ex. "https://tally.so/r/abc123").
-// Le formulaire doit déclarer les champs cachés "plan", "profil" et "email" pour récupérer
+// Le formulaire doit déclarer les champs cachés "plan", "profil", "langue" et "email" pour récupérer
 // le contexte du clic. Laisser vide tant que le formulaire n'existe pas.
 const WAITLIST_URL = "";
+
+const EN = document.documentElement.lang === "en";
+const MESSAGES = EN
+  ? { soon: "Thanks! The waitlist opens very soon.", done: "Thanks! Finish signing up in the tab that just opened." }
+  : { soon: "Merci ! La liste d'attente ouvre très bientôt.", done: "Merci ! Finalisez votre inscription dans l'onglet ouvert." };
 
 function waitlistHref(params) {
   if (!WAITLIST_URL) return "#rejoindre";
@@ -33,7 +38,7 @@ if (nav) {
 
 // Liens vers la liste d'attente, avec le plan cliqué pour mesurer l'intérêt par offre
 document.querySelectorAll("[data-waitlist]").forEach((link) => {
-  const plan = link.dataset.waitlist;
+  const plan = EN ? `${link.dataset.waitlist}-en` : link.dataset.waitlist;
   const href = waitlistHref({ plan });
   link.setAttribute("href", href);
   if (WAITLIST_URL) {
@@ -52,11 +57,11 @@ form?.addEventListener("submit", (event) => {
   const email = form.elements.email.value.trim();
   const profil = form.elements.profil.value;
   if (!WAITLIST_URL) {
-    msg.textContent = "Merci ! La liste d'attente ouvre très bientôt.";
+    msg.textContent = MESSAGES.soon;
     return;
   }
-  window.open(waitlistHref({ email, profil, plan: "accueil" }), "_blank", "noopener");
-  msg.textContent = "Merci ! Finalisez votre inscription dans l'onglet ouvert.";
+  window.open(waitlistHref({ email, profil, plan: EN ? "accueil-en" : "accueil", langue: EN ? "en" : "fr" }), "_blank", "noopener");
+  msg.textContent = MESSAGES.done;
 });
 
 // Page tarifs : bascule Particuliers / Professionnels

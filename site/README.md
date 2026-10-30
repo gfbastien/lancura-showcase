@@ -4,7 +4,8 @@ Site statique (HTML/CSS/JS, aucune étape de build), indépendant de la webapp.
 
 | Fichier | Rôle |
 |---|---|
-| `index.html` | Landing page |
+| `index.html` | Landing page (FR) |
+| `en/index.html` | Landing page (EN) — tarifs et mentions légales restent en FR |
 | `tarifs.html` | Offres particuliers / professionnels |
 | `mentions-legales.html` | Mentions légales + RGPD (champs `[À COMPLÉTER]` en surbrillance) |
 | `styles.css`, `main.js` | Styles et interactions partagés |
@@ -24,7 +25,7 @@ python3 -m http.server -d site 8000   # puis http://localhost:8000
 
 ## Liste d'attente
 
-1. Créer un formulaire sur tally.so avec les champs `email`, et les champs cachés `plan` et `profil`.
+1. Créer un formulaire sur tally.so avec les champs `email`, et les champs cachés `plan`, `profil` et `langue`.
 2. Coller son lien de partage dans `WAITLIST_URL` en tête de `main.js`.
 
 Chaque bouton envoie le plan cliqué (`data-waitlist="..."`) : on mesure quelle offre attire le plus, avant même d'avoir fixé les prix.

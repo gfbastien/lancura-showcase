@@ -102,6 +102,15 @@ p { margin: 0; }
 .nav-links a { color: var(--gray-600); font-weight: 600; font-size: 0.93rem; }
 .nav-links a:hover, .nav-links a.active { color: var(--navy-900); }
 .nav-cta { display: flex; align-items: center; gap: 0.75rem; }
+.lang-switch {
+  display: inline-flex; align-items: center; gap: 2px; padding: 3px; border-radius: 999px;
+  background: var(--gray-100); font-size: 0.78rem; font-weight: 700; letter-spacing: 0.02em;
+}
+.lang-switch span, .lang-switch b { padding: 0.3rem 0.55rem; border-radius: 999px; }
+.lang-switch span { color: var(--gray-600); }
+.lang-switch b { background: var(--white); color: var(--navy-900); box-shadow: var(--shadow-sm); }
+.lang-switch:hover span { color: var(--navy-900); }
+.nav-links small { font-size: 0.72em; color: var(--gray-400); }
 .nav-toggle { display: none; background: none; border: 0; padding: 8px; cursor: pointer; color: var(--navy-900); }
 @media (max-width: 920px) {
   .nav-links, .nav-cta .btn-ghost { display: none; }
@@ -114,7 +123,10 @@ p { margin: 0; }
   }
   .nav.open .nav-links a { font-size: 1.05rem; }
 }
-@media (max-width: 420px) { .nav-cta .btn { padding: 0.65rem 1rem; font-size: 0.88rem; } }
+@media (max-width: 480px) {
+  /* Le hero porte déjà l'appel à l'action : on garde logo, langue et menu */
+  .nav-cta .btn-primary { display: none; }
+}
 
 /* ---------- Sections ---------- */
 section { padding: 104px 0; }
