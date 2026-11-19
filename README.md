@@ -1,82 +1,44 @@
-<div align="center">
+# L'Ancura
 
-# 🏠 L'Ancura
+Seeing a property clearly before buying it.
 
-**Seeing a property clearly before buying it.**
+L'Ancura is a data product that turns French open data into a clear, readable assessment of a rental investment: what makes a location attractive, what calls for caution, and how it compares with its surroundings.
 
-A personal data project exploring how French open data can make rental investment decisions less of a gamble.
+Website: <https://www.lancura.fr>
 
-[![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)](https://python.org)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=flat-square&logo=postgresql&logoColor=white)](https://postgresql.org)
-[![PostGIS](https://img.shields.io/badge/PostGIS-5CAD4A?style=flat-square&logo=postgis&logoColor=white)](https://postgis.net)
-[![License](https://img.shields.io/badge/License-Proprietary-red?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-In_Development-yellow?style=flat-square)]()
+## Context
 
-</div>
+Buying a rental property is one of the largest financial decisions most people make, and it is still largely based on a few listings and a visit. The relevant information is public but scattered across many portals and formats. L'Ancura brings it together so that the decision is an informed one.
 
----
+## Principles
 
-## 💡 Why this project
+- **Open data only.** No dependence on proprietary listings.
+- **Clarity over complexity.** Results are readable without a spreadsheet.
+- **Context over a single number.** A location is good or bad relative to the investor's goals.
+- **Honesty about uncertainty.** When data is thin or missing, the product says so.
 
-Buying a rental property in France is one of the biggest financial decisions most people make — and it is still largely made on intuition, a few listings and a weekend visit.
+## Scope
 
-The information that actually matters exists. It is public, free and remarkably rich. But it is scattered across dozens of portals, formats and administrations, and almost nobody has the time to put it together.
+- Property-level scoring across twelve dimensions, weighted by investor profile
+- Investor profile questionnaire
+- Side-by-side comparison and PDF export
+- Coverage extended region by region
+- French and English
 
-L'Ancura started from a simple frustration: **why is it so hard to get an honest, complete picture of a place before investing in it?**
+## Stack
 
-## 🎯 What L'Ancura does
+Python, SQL, PostgreSQL / PostGIS, server-rendered web interface.
 
-L'Ancura gathers French open data around a property and turns it into a clear, readable picture of its investment potential.
+## Repository
 
-Give it an address, and it tells you — in plain language — what makes that location attractive, what should make you cautious, and how it compares to what's around it.
+This repository is a public showcase. The source code and methodology are kept in a private repository.
 
-The goal is not to replace a human decision, but to make sure that decision is an **informed** one.
+## About
 
-## 🎬 See it in action
+I am a data analyst interested in turning scattered data into something people can use. L'Ancura is where data and real estate meet.
 
-> 🚧 **Coming soon** — a short demo video and screenshots of the web app.
+Feedback and questions are welcome on [LinkedIn](https://linkedin.com/in/gfbastien).
 
-<!-- ![L'Ancura web app](assets/webapp-screenshot.png) -->
+## License
 
-> 🌐 **Website under construction** — the link will be added here once it's live.
-
-## 🧭 Guiding principles
-
-- **Open data only** — everything relies on publicly available French datasets, not on proprietary listings.
-- **Clarity over complexity** — the result should be understandable by someone who has never opened a spreadsheet.
-- **Context over a single number** — a location is never "good" or "bad" in absolute terms; it depends on what the investor is looking for.
-- **Honesty about uncertainty** — when the data is thin or missing, the tool says so rather than pretending.
-
-## 🗺️ The data behind it
-
-L'Ancura builds on the wealth of French public data, including official sources on:
-
-- real estate transactions,
-- local demographics and economic activity,
-- energy performance of housing,
-- public facilities, transport and services,
-- natural risks.
-
-All of it is published by French public institutions under open licences.
-
-## 🛠️ Built with
-
-Python · SQL · PostgreSQL / PostGIS · a lightweight web interface
-
-## 🚧 Status
-
-L'Ancura is an ongoing personal project, actively developed and regularly extended with new data and new regions. This repository is a showcase: the source code and methodology are kept private.
-
-## 🤝 About
-
-I'm a data analyst who enjoys turning messy, scattered data into something people can actually use. L'Ancura is where my interest in data and in real estate meet.
-
-Feedback, questions or ideas are welcome — feel free to reach out on [LinkedIn](https://linkedin.com/in/gfbastien).
-
----
-
-<div align="center">
-
-© 2026 — All rights reserved. See [LICENSE](LICENSE).
-
-</div>
+Copyright © 2026. All rights reserved. See [LICENSE](LICENSE).
